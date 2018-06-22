@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 LaunchDarkly REST API
 
@@ -9,7 +9,6 @@ Contact: support@launchdarkly.com
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3E3B7C6E-C41D-43FA-8C2F-A0D6A01A5F21}</ProjectGuid>
@@ -38,6 +37,12 @@ Contact: support@launchdarkly.com
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,32 +52,87 @@ Contact: support@launchdarkly.com
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <HintPath Condition="Exists('..\packages')">..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <HintPath Condition="Exists('..\..\packages')">..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="JsonSubTypes">
-      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-      <HintPath Condition="Exists('..\packages')">..\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-      <HintPath Condition="Exists('..\..\packages')">..\..\packages\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\JsonSubTypes.1.2.0\lib\net45\JsonSubTypes.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp">
-        <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-        <HintPath Condition="Exists('..\packages')">..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-        <HintPath Condition="Exists('..\..\packages')">..\..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs"
-             Exclude="obj\**" />
+    <Compile Include="Api\AuditLogApi.cs" />
+    <Compile Include="Api\CustomRolesApi.cs" />
+    <Compile Include="Api\EnvironmentsApi.cs" />
+    <Compile Include="Api\FeatureFlagsApi.cs" />
+    <Compile Include="Api\ProjectsApi.cs" />
+    <Compile Include="Api\RootApi.cs" />
+    <Compile Include="Api\TeamMembersApi.cs" />
+    <Compile Include="Api\UsersApi.cs" />
+    <Compile Include="Api\UserSegmentsApi.cs" />
+    <Compile Include="Api\UserSettingsApi.cs" />
+    <Compile Include="Api\WebhooksApi.cs" />
+    <Compile Include="Client\ApiClient.cs" />
+    <Compile Include="Client\ApiException.cs" />
+    <Compile Include="Client\ApiResponse.cs" />
+    <Compile Include="Client\Configuration.cs" />
+    <Compile Include="Client\ExceptionFactory.cs" />
+    <Compile Include="Client\GlobalConfiguration.cs" />
+    <Compile Include="Client\IApiAccessor.cs" />
+    <Compile Include="Client\IReadableConfiguration.cs" />
+    <Compile Include="Client\SwaggerDateConverter.cs" />
+    <Compile Include="Model\Action.cs" />
+    <Compile Include="Model\Actions.cs" />
+    <Compile Include="Model\AuditLogEntries.cs" />
+    <Compile Include="Model\AuditLogEntry.cs" />
+    <Compile Include="Model\AuditLogEntryTarget.cs" />
+    <Compile Include="Model\Clause.cs" />
+    <Compile Include="Model\CustomRole.cs" />
+    <Compile Include="Model\CustomRoleBody.cs" />
+    <Compile Include="Model\CustomRoleKeyOrId.cs" />
+    <Compile Include="Model\CustomRoles.cs" />
+    <Compile Include="Model\Environment.cs" />
+    <Compile Include="Model\EnvironmentBody.cs" />
+    <Compile Include="Model\Fallthrough.cs" />
+    <Compile Include="Model\FeatureFlag.cs" />
+    <Compile Include="Model\FeatureFlagBody.cs" />
+    <Compile Include="Model\FeatureFlagConfig.cs" />
+    <Compile Include="Model\FeatureFlags.cs" />
+    <Compile Include="Model\FeatureFlagStatus.cs" />
+    <Compile Include="Model\FeatureFlagStatuses.cs" />
+    <Compile Include="Model\Id.cs" />
+    <Compile Include="Model\Link.cs" />
+    <Compile Include="Model\Links.cs" />
+    <Compile Include="Model\Member.cs" />
+    <Compile Include="Model\Members.cs" />
+    <Compile Include="Model\MembersBody.cs" />
+    <Compile Include="Model\PatchComment.cs" />
+    <Compile Include="Model\PatchOperation.cs" />
+    <Compile Include="Model\Policy.cs" />
+    <Compile Include="Model\Prerequisite.cs" />
+    <Compile Include="Model\Project.cs" />
+    <Compile Include="Model\ProjectBody.cs" />
+    <Compile Include="Model\Projects.cs" />
+    <Compile Include="Model\Resource.cs" />
+    <Compile Include="Model\Resources.cs" />
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\Rollout.cs" />
+    <Compile Include="Model\Rule.cs" />
+    <Compile Include="Model\Statement.cs" />
+    <Compile Include="Model\Statements.cs" />
+    <Compile Include="Model\Target.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserFlagSetting.cs" />
+    <Compile Include="Model\UserFlagSettings.cs" />
+    <Compile Include="Model\UserRecord.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\UserSegment.cs" />
+    <Compile Include="Model\UserSegmentBody.cs" />
+    <Compile Include="Model\UserSegmentRule.cs" />
+    <Compile Include="Model\UserSegments.cs" />
+    <Compile Include="Model\UserSettingsBody.cs" />
+    <Compile Include="Model\Variation.cs" />
+    <Compile Include="Model\Webhook.cs" />
+    <Compile Include="Model\WebhookBody.cs" />
+    <Compile Include="Model\Webhooks.cs" />
+    <Compile Include="Model\WeightedVariation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-      <None Include="packages.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
-

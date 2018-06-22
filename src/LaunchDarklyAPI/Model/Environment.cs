@@ -43,7 +43,7 @@ namespace LaunchDarklyAPI.Model
         /// <param name="defaultTtl">The default TTL..</param>
         /// <param name="secureMode">Determines if this environment is in safe mode..</param>
         /// <param name="defaultTrackEvents">Set to true to send detailed event information for new flags..</param>
-        public Environment(Links links = default(Links), Id id = default(Id), string key = default(string), string name = default(string), string apiKey = default(string), string mobileKey = default(string), string color = default(string), decimal? defaultTtl = default(decimal?), bool? secureMode = default(bool?), bool? defaultTrackEvents = default(bool?))
+        public Environment(Links links = default(Links), string id = default(string), string key = default(string), string name = default(string), string apiKey = default(string), string mobileKey = default(string), string color = default(string), decimal? defaultTtl = default(decimal?), bool? secureMode = default(bool?), bool? defaultTrackEvents = default(bool?))
         {
             this.Links = links;
             this.Id = id;
@@ -67,7 +67,7 @@ namespace LaunchDarklyAPI.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="_id", EmitDefaultValue=false)]
-        public Id Id { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
         /// The key for the environment.

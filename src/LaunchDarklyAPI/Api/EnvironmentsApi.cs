@@ -57,7 +57,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="projectKey">The project key, used to tie the flags together under one project so they can be managed together.</param>
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <returns>Environment</returns>
-        Environment GetEnvironment (string projectKey, string environmentKey);
+        LaunchDarklyAPI.Model.Environment GetEnvironment (string projectKey, string environmentKey);
 
         /// <summary>
         /// Get an environment given a project and key.
@@ -69,7 +69,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="projectKey">The project key, used to tie the flags together under one project so they can be managed together.</param>
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <returns>ApiResponse of Environment</returns>
-        ApiResponse<Environment> GetEnvironmentWithHttpInfo (string projectKey, string environmentKey);
+        ApiResponse<LaunchDarklyAPI.Model.Environment> GetEnvironmentWithHttpInfo (string projectKey, string environmentKey);
         /// <summary>
         /// Modify an environment by ID.
         /// </summary>
@@ -81,7 +81,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <param name="patchDelta">Requires a JSON Patch representation of the desired changes to the project. &#39;http://jsonpatch.com/&#39;</param>
         /// <returns>Environment</returns>
-        Environment PatchEnvironment (string projectKey, string environmentKey, List<PatchOperation> patchDelta);
+        LaunchDarklyAPI.Model.Environment PatchEnvironment (string projectKey, string environmentKey, List<PatchOperation> patchDelta);
 
         /// <summary>
         /// Modify an environment by ID.
@@ -94,7 +94,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <param name="patchDelta">Requires a JSON Patch representation of the desired changes to the project. &#39;http://jsonpatch.com/&#39;</param>
         /// <returns>ApiResponse of Environment</returns>
-        ApiResponse<Environment> PatchEnvironmentWithHttpInfo (string projectKey, string environmentKey, List<PatchOperation> patchDelta);
+        ApiResponse<LaunchDarklyAPI.Model.Environment> PatchEnvironmentWithHttpInfo (string projectKey, string environmentKey, List<PatchOperation> patchDelta);
         /// <summary>
         /// Create a new environment in a specified project with a given name, key, and swatch color.
         /// </summary>
@@ -153,7 +153,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="projectKey">The project key, used to tie the flags together under one project so they can be managed together.</param>
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <returns>Task of Environment</returns>
-        System.Threading.Tasks.Task<Environment> GetEnvironmentAsync (string projectKey, string environmentKey);
+        System.Threading.Tasks.Task<LaunchDarklyAPI.Model.Environment> GetEnvironmentAsync (string projectKey, string environmentKey);
 
         /// <summary>
         /// Get an environment given a project and key.
@@ -165,7 +165,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="projectKey">The project key, used to tie the flags together under one project so they can be managed together.</param>
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <returns>Task of ApiResponse (Environment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Environment>> GetEnvironmentAsyncWithHttpInfo (string projectKey, string environmentKey);
+        System.Threading.Tasks.Task<ApiResponse<LaunchDarklyAPI.Model.Environment>> GetEnvironmentAsyncWithHttpInfo (string projectKey, string environmentKey);
         /// <summary>
         /// Modify an environment by ID.
         /// </summary>
@@ -177,7 +177,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <param name="patchDelta">Requires a JSON Patch representation of the desired changes to the project. &#39;http://jsonpatch.com/&#39;</param>
         /// <returns>Task of Environment</returns>
-        System.Threading.Tasks.Task<Environment> PatchEnvironmentAsync (string projectKey, string environmentKey, List<PatchOperation> patchDelta);
+        System.Threading.Tasks.Task<LaunchDarklyAPI.Model.Environment> PatchEnvironmentAsync (string projectKey, string environmentKey, List<PatchOperation> patchDelta);
 
         /// <summary>
         /// Modify an environment by ID.
@@ -190,7 +190,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <param name="patchDelta">Requires a JSON Patch representation of the desired changes to the project. &#39;http://jsonpatch.com/&#39;</param>
         /// <returns>Task of ApiResponse (Environment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Environment>> PatchEnvironmentAsyncWithHttpInfo (string projectKey, string environmentKey, List<PatchOperation> patchDelta);
+        System.Threading.Tasks.Task<ApiResponse<LaunchDarklyAPI.Model.Environment>> PatchEnvironmentAsyncWithHttpInfo (string projectKey, string environmentKey, List<PatchOperation> patchDelta);
         /// <summary>
         /// Create a new environment in a specified project with a given name, key, and swatch color.
         /// </summary>
@@ -476,9 +476,9 @@ namespace LaunchDarklyAPI.Api
         /// <param name="projectKey">The project key, used to tie the flags together under one project so they can be managed together.</param>
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <returns>Environment</returns>
-        public Environment GetEnvironment (string projectKey, string environmentKey)
+        public LaunchDarklyAPI.Model.Environment GetEnvironment (string projectKey, string environmentKey)
         {
-             ApiResponse<Environment> localVarResponse = GetEnvironmentWithHttpInfo(projectKey, environmentKey);
+             ApiResponse<LaunchDarklyAPI.Model.Environment> localVarResponse = GetEnvironmentWithHttpInfo(projectKey, environmentKey);
              return localVarResponse.Data;
         }
 
@@ -489,7 +489,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="projectKey">The project key, used to tie the flags together under one project so they can be managed together.</param>
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <returns>ApiResponse of Environment</returns>
-        public ApiResponse< Environment > GetEnvironmentWithHttpInfo (string projectKey, string environmentKey)
+        public ApiResponse<LaunchDarklyAPI.Model.Environment> GetEnvironmentWithHttpInfo (string projectKey, string environmentKey)
         {
             // verify the required parameter 'projectKey' is set
             if (projectKey == null)
@@ -542,9 +542,9 @@ namespace LaunchDarklyAPI.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Environment>(localVarStatusCode,
+            return new ApiResponse<LaunchDarklyAPI.Model.Environment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Environment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Environment)));
+                (LaunchDarklyAPI.Model.Environment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LaunchDarklyAPI.Model.Environment)));
         }
 
         /// <summary>
@@ -554,9 +554,9 @@ namespace LaunchDarklyAPI.Api
         /// <param name="projectKey">The project key, used to tie the flags together under one project so they can be managed together.</param>
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <returns>Task of Environment</returns>
-        public async System.Threading.Tasks.Task<Environment> GetEnvironmentAsync (string projectKey, string environmentKey)
+        public async System.Threading.Tasks.Task<LaunchDarklyAPI.Model.Environment> GetEnvironmentAsync (string projectKey, string environmentKey)
         {
-             ApiResponse<Environment> localVarResponse = await GetEnvironmentAsyncWithHttpInfo(projectKey, environmentKey);
+             ApiResponse<LaunchDarklyAPI.Model.Environment> localVarResponse = await GetEnvironmentAsyncWithHttpInfo(projectKey, environmentKey);
              return localVarResponse.Data;
 
         }
@@ -568,7 +568,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="projectKey">The project key, used to tie the flags together under one project so they can be managed together.</param>
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <returns>Task of ApiResponse (Environment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Environment>> GetEnvironmentAsyncWithHttpInfo (string projectKey, string environmentKey)
+        public async System.Threading.Tasks.Task<ApiResponse<LaunchDarklyAPI.Model.Environment>> GetEnvironmentAsyncWithHttpInfo (string projectKey, string environmentKey)
         {
             // verify the required parameter 'projectKey' is set
             if (projectKey == null)
@@ -621,9 +621,9 @@ namespace LaunchDarklyAPI.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Environment>(localVarStatusCode,
+            return new ApiResponse<LaunchDarklyAPI.Model.Environment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Environment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Environment)));
+                (LaunchDarklyAPI.Model.Environment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LaunchDarklyAPI.Model.Environment)));
         }
 
         /// <summary>
@@ -634,9 +634,9 @@ namespace LaunchDarklyAPI.Api
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <param name="patchDelta">Requires a JSON Patch representation of the desired changes to the project. &#39;http://jsonpatch.com/&#39;</param>
         /// <returns>Environment</returns>
-        public Environment PatchEnvironment (string projectKey, string environmentKey, List<PatchOperation> patchDelta)
+        public LaunchDarklyAPI.Model.Environment PatchEnvironment (string projectKey, string environmentKey, List<PatchOperation> patchDelta)
         {
-             ApiResponse<Environment> localVarResponse = PatchEnvironmentWithHttpInfo(projectKey, environmentKey, patchDelta);
+             ApiResponse<LaunchDarklyAPI.Model.Environment> localVarResponse = PatchEnvironmentWithHttpInfo(projectKey, environmentKey, patchDelta);
              return localVarResponse.Data;
         }
 
@@ -648,7 +648,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <param name="patchDelta">Requires a JSON Patch representation of the desired changes to the project. &#39;http://jsonpatch.com/&#39;</param>
         /// <returns>ApiResponse of Environment</returns>
-        public ApiResponse< Environment > PatchEnvironmentWithHttpInfo (string projectKey, string environmentKey, List<PatchOperation> patchDelta)
+        public ApiResponse<LaunchDarklyAPI.Model.Environment> PatchEnvironmentWithHttpInfo (string projectKey, string environmentKey, List<PatchOperation> patchDelta)
         {
             // verify the required parameter 'projectKey' is set
             if (projectKey == null)
@@ -712,9 +712,9 @@ namespace LaunchDarklyAPI.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Environment>(localVarStatusCode,
+            return new ApiResponse<LaunchDarklyAPI.Model.Environment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Environment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Environment)));
+                (LaunchDarklyAPI.Model.Environment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LaunchDarklyAPI.Model.Environment)));
         }
 
         /// <summary>
@@ -725,9 +725,9 @@ namespace LaunchDarklyAPI.Api
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <param name="patchDelta">Requires a JSON Patch representation of the desired changes to the project. &#39;http://jsonpatch.com/&#39;</param>
         /// <returns>Task of Environment</returns>
-        public async System.Threading.Tasks.Task<Environment> PatchEnvironmentAsync (string projectKey, string environmentKey, List<PatchOperation> patchDelta)
+        public async System.Threading.Tasks.Task<LaunchDarklyAPI.Model.Environment> PatchEnvironmentAsync (string projectKey, string environmentKey, List<PatchOperation> patchDelta)
         {
-             ApiResponse<Environment> localVarResponse = await PatchEnvironmentAsyncWithHttpInfo(projectKey, environmentKey, patchDelta);
+             ApiResponse<LaunchDarklyAPI.Model.Environment> localVarResponse = await PatchEnvironmentAsyncWithHttpInfo(projectKey, environmentKey, patchDelta);
              return localVarResponse.Data;
 
         }
@@ -740,7 +740,7 @@ namespace LaunchDarklyAPI.Api
         /// <param name="environmentKey">The environment key, used to tie together flag configuration and users under one environment so they can be managed together.</param>
         /// <param name="patchDelta">Requires a JSON Patch representation of the desired changes to the project. &#39;http://jsonpatch.com/&#39;</param>
         /// <returns>Task of ApiResponse (Environment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Environment>> PatchEnvironmentAsyncWithHttpInfo (string projectKey, string environmentKey, List<PatchOperation> patchDelta)
+        public async System.Threading.Tasks.Task<ApiResponse<LaunchDarklyAPI.Model.Environment>> PatchEnvironmentAsyncWithHttpInfo (string projectKey, string environmentKey, List<PatchOperation> patchDelta)
         {
             // verify the required parameter 'projectKey' is set
             if (projectKey == null)
@@ -804,9 +804,9 @@ namespace LaunchDarklyAPI.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Environment>(localVarStatusCode,
+            return new ApiResponse<LaunchDarklyAPI.Model.Environment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Environment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Environment)));
+                (LaunchDarklyAPI.Model.Environment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LaunchDarklyAPI.Model.Environment)));
         }
 
         /// <summary>

@@ -1,0 +1,17 @@
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\LaunchDarklyAPI.Test.dll
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\LaunchDarklyAPI.Test.pdb
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\JsonSubTypes.dll
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\LaunchDarklyAPI.dll
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\nunit.framework.dll
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\RestSharp.dll
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\LaunchDarklyAPI.pdb
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\RestSharp.xml
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\nunit.framework.xml
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\obj\Debug\LaunchDarklyAPI.Test.csprojAssemblyReference.cache
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\obj\Debug\LaunchDarklyAPI.Test.csproj.CoreCompileInputs.cache
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\obj\Debug\LaunchDarklyAPI.Test.csproj.CopyComplete
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\obj\Debug\LaunchDarklyAPI.Test.dll
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\obj\Debug\LaunchDarklyAPI.Test.pdb
+C:\Users\bfriesen\source\repos\LaunchDarklyAPI\src\LaunchDarklyAPI.Test\bin\Debug\LaunchDarklyAPI.Test.dll.config

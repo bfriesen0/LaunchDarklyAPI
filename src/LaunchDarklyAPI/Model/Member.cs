@@ -45,7 +45,7 @@ namespace LaunchDarklyAPI.Model
         /// <param name="pendingInvite">pendingInvite.</param>
         /// <param name="isBeta">isBeta.</param>
         /// <param name="customRoles">customRoles.</param>
-        public Member(Links links = default(Links), Id id = default(Id), Role? role = default(Role?), string email = default(string), bool? pendingInvite = default(bool?), bool? isBeta = default(bool?), List<Id> customRoles = default(List<Id>))
+        public Member(Links links = default(Links), string id = default(string), Role? role = default(Role?), string email = default(string), bool? pendingInvite = default(bool?), bool? isBeta = default(bool?), List<Id> customRoles = default(List<Id>))
         {
             this.Links = links;
             this.Id = id;
@@ -66,7 +66,7 @@ namespace LaunchDarklyAPI.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="_id", EmitDefaultValue=false)]
-        public Id Id { get; set; }
+        public string Id { get; set; }
 
 
         /// <summary>

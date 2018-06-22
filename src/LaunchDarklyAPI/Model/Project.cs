@@ -38,7 +38,7 @@ namespace LaunchDarklyAPI.Model
         /// <param name="key">key.</param>
         /// <param name="name">name.</param>
         /// <param name="environments">environments.</param>
-        public Project(Links links = default(Links), Id id = default(Id), string key = default(string), string name = default(string), List<Environment> environments = default(List<Environment>))
+        public Project(Links links = default(Links), string id = default(string), string key = default(string), string name = default(string), List<Environment> environments = default(List<Environment>))
         {
             this.Links = links;
             this.Id = id;
@@ -57,7 +57,7 @@ namespace LaunchDarklyAPI.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="_id", EmitDefaultValue=false)]
-        public Id Id { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
         /// Gets or Sets Key
